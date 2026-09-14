@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TypeCraft — Learn to Type</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">⌨</span>
+      <span class="brand-name">TypeCraft</span>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="lessons">Lessons</button>
+      <button class="tab" data-tab="practice">Practice</button>
+      <button class="tab" data-tab="quotes">Quotes</button>
+      <button class="tab" data-tab="stats">Stats</button>
+    </nav>
+    <button id="themeToggle" class="icon-btn" title="Toggle light / dark">🌙</button>
+  </header>
+
+  <main>
+    <!-- LESSONS -->
+    <section id="panel-lessons" class="panel active">
+      <div class="lessons-layout">
+        <aside class="lesson-sidebar">
+          <div class="sidebar-title">Curriculum</div>
+          <ol class="lesson-list" id="lessonList"></ol>
+        </aside>
+        <div class="lesson-main">
+          <div class="lesson-head">
+            <h2 id="lessonTitle">Lesson</h2>
+            <p id="lessonDesc" class="muted"></p>
+          </div>
+          <div class="type-stage" id="typeArea-lessons"></div>
+          <div class="live-stats" id="liveStats-lessons"></div>
+          <div class="keyboard" id="keyboard-lessons"></div>
+          <div class="controls">
+            <button id="lessonPrev" class="btn">◀ Prev</button>
+            <button id="lessonRestart" class="btn">↺ Restart</button>
+            <button id="lessonNext" class="btn primary">Next ▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section id="panel-practice" class="panel">
+      <div class="options-bar" id="practiceOptions">
+        <div class="opt-group" id="practiceModeGroup">
+          <button class="opt active" data-mode="time">time</button>
+          <button class="opt" data-mode="words">words</button>
+        </div>
+        <div class="opt-divider"></div>
+        <div class="opt-group" id="practiceValueGroup"></div>
+        <div class="opt-divider"></div>
+        <div class="opt-group">
+          <button class="opt toggle" id="togglePunct" data-on="0">punctuation</button>
+          <button class="opt toggle" id="toggleNums" data-on="0">numbers</button>
+        </div>
+      </div>
+      <div class="type-stage" id="typeArea-practice"></div>
+      <div class="live-stats" id="liveStats-practice"></div>
+      <div class="keyboard" id="keyboard-practice"></div>
+      <div class="hint muted">press <kbd>tab</kbd> or the button to restart</div>
+      <div class="controls"><button id="practiceRestart" class="btn">↺ Restart</button></div>
+    </section>
+
+    <!-- QUOTES -->
+    <section id="panel-quotes" class="panel">
+      <div class="type-stage" id="typeArea-quotes"></div>
+      <div class="live-stats" id="liveStats-quotes"></div>
+      <div class="keyboard" id="keyboard-quotes"></div>
+      <div class="controls">
+        <button id="quoteNew" class="btn primary">🔀 New Quote</button>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="panel-stats" class="panel">
+      <div class="stats-grid" id="statsGrid"></div>
+      <h3 class="section-title">Weak Keys</h3>
+      <p class="muted">Redder keys are the ones you miss most often. Colors fade as you improve.</p>
+      <div class="keyboard" id="keyboard-stats"></div>
+      <h3 class="section-title">Recent Sessions</h3>
+      <div id="historyList" class="history-list"></div>
+      <button id="resetStats" class="btn danger">Reset All Stats</button>
+    </section>
+  </main>
+
+  <footer class="foot muted">Built for learning to type — practice a little every day.</footer>
+</div>
+
+<div id="resultModal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-badge" id="resultBadge">Nice work!</div>
+    <h2 id="resultHeadline">Results</h2>
+    <div class="result-stats" id="resultStats"></div>
+    <div class="modal-actions">
+      <button id="resultRestart" class="btn">↺ Try Again</button>
+      <button id="resultNext" class="btn primary hidden">Next Lesson ▶</button>
+    </div>
+  </div>
+</div>
+
+<input id="hiddenInput" class="hidden-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" />
+
+<script src="app.js"></script>
+</body>
+</html>
