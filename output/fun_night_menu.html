@@ -1,0 +1,190 @@
+<!doctype html>
+<title>Fun Night In</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@600&display=swap">
+<style>
+  :root{
+    --ground:#241226;
+    --ground-deep:#160b19;
+    --card:#fbf3e6;
+    --card-edge:#e9d9bd;
+    --ink:#2c1c22;
+    --ink-soft:#6b5a58;
+    --raspberry:#c8447e;
+    --amber:#d99a34;
+    --sage:#5c7a5e;
+    --rule:#d8c39c;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100%;
+    background:
+      radial-gradient(ellipse 900px 600px at 50% -10%, #3a1f3c 0%, transparent 60%),
+      linear-gradient(180deg, var(--ground) 0%, var(--ground-deep) 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:"Karla", system-ui, sans-serif;
+    padding-inline:16px;
+    padding-block:48px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .menu{
+    width:100%;
+    max-width:520px;
+    background:var(--card);
+    border:1px solid var(--card-edge);
+    border-radius:6px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55), 0 0 0 6px rgba(251,243,230,0.04);
+    padding:44px 36px 40px;
+  }
+
+  header{
+    text-align:center;
+    margin-bottom:30px;
+  }
+  .eyebrow{
+    font-family:"Caveat", cursive;
+    font-size:1.4rem;
+    color:var(--raspberry);
+    display:block;
+    margin-bottom:2px;
+  }
+  h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:clamp(2.1rem, 6vw, 2.6rem);
+    letter-spacing:-0.01em;
+    margin:0;
+    text-wrap:balance;
+  }
+  .subhead{
+    font-size:0.8rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:10px;
+  }
+
+  .ornament{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:26px 0 22px;
+  }
+  .ornament::before, .ornament::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--rule);
+  }
+  .ornament svg{ flex-shrink:0; color:var(--amber); }
+
+  section + section{ margin-top:30px; }
+
+  .course-title{
+    font-family:"Fraunces", Georgia, serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.05rem;
+    color:var(--raspberry);
+    margin:0 0 14px;
+  }
+
+  .items{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+  }
+  .items li{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .items .name{
+    font-weight:700;
+    font-size:1rem;
+  }
+  .items .note{
+    color:var(--ink-soft);
+    font-size:0.88rem;
+  }
+  .leader{
+    flex:1;
+    border-bottom:1px dotted var(--card-edge);
+    transform:translateY(-3px);
+    min-width:12px;
+  }
+
+  .project{
+    background:rgba(200,68,126,0.06);
+    border:1px dashed var(--raspberry);
+    border-radius:5px;
+    padding:16px 18px;
+  }
+  .project .name{ font-family:"Fraunces", Georgia, serif; font-size:1.15rem; font-weight:600; }
+  .project .note{ display:block; margin-top:4px; }
+
+  footer{
+    text-align:center;
+    margin-top:34px;
+    font-family:"Caveat", cursive;
+    font-size:1.2rem;
+    color:var(--sage);
+  }
+
+  @media (max-width:400px){
+    .menu{ padding:34px 22px 30px; }
+  }
+</style>
+
+<div class="menu">
+  <header>
+    <span class="eyebrow">just the two of us</span>
+    <h1>Fun Night In</h1>
+    <div class="subhead">An evening menu, home edition</div>
+  </header>
+
+  <div class="ornament">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M4 12h16"/></svg>
+  </div>
+
+  <section class="project">
+    <div class="name">🍪 Cookie Baking</div>
+    <span class="note">tonight's project — dough, oven, and a plate of the warm ones first</span>
+  </section>
+
+  <section>
+    <h2 class="course-title">Nibbles</h2>
+    <ul class="items">
+      <li><span class="name">Carrots &amp; Russian Dressing</span><span class="leader"></span></li>
+      <li><span class="name">Popcorn</span><span class="leader"></span></li>
+      <li><span class="name">Lachuch &amp; Dips</span><span class="leader"></span><span class="note">torn, not sliced</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="course-title">To Build</h2>
+    <ul class="items">
+      <li><span class="name">BBQ Wheels</span><span class="leader"></span></li>
+      <li><span class="name">Wraps</span><span class="leader"></span></li>
+      <li><span class="name">Acai Bowls</span><span class="leader"></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="course-title">To Sip</h2>
+    <ul class="items">
+      <li><span class="name">Raspberry Lemon Tea</span><span class="leader"></span><span class="note">over ice</span></li>
+      <li><span class="name">Iced Coffee</span><span class="leader"></span></li>
+    </ul>
+  </section>
+
+  <footer>enjoy, you two</footer>
+</div>
