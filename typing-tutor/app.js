@@ -107,6 +107,15 @@ function charToKey(ch) {
   return { key: null, shift: false };
 }
 
+function normalizeTypedKey(e) {
+  const k = e.key;
+  if (k.length === 1 && /[a-zA-Z]/.test(k)) {
+    const capsOn = typeof e.getModifierState === "function" && e.getModifierState("CapsLock");
+    if (capsOn) return e.shiftKey ? k.toUpperCase() : k.toLowerCase();
+  }
+  return k;
+}
+
 /* ================= Drill generators ================= */
 
 function genKeyDrill(focus, pool, groups = 12) {
@@ -868,7 +877,7 @@ function init() {
     if (!activeState) return;
     if (e.key === "Tab") { e.preventDefault(); if (currentRestart) currentRestart(); return; }
     if (e.key === "Backspace") { e.preventDefault(); handleBackspace(activeState); return; }
-    if (e.key.length === 1) { e.preventDefault(); handleChar(activeState, e.key); return; }
+    if (e.key.length === 1) { e.preventDefault(); handleChar(activeState, normalizeTypedKey(e)); return; }
   });
 
   document.addEventListener("click", e => {
