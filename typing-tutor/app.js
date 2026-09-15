@@ -42,6 +42,21 @@ const QUOTES = [
   { text: "A journey of a thousand miles begins with a single step.", author: "Lao Tzu" },
   { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
   { text: "What we know is a drop, what we do not know is an ocean.", author: "Isaac Newton" },
+  { text: "The two most important days in your life are the day you are born and the day you find out why.", author: "Mark Twain" },
+  { text: "I can resist everything except temptation.", author: "Oscar Wilde" },
+  { text: "In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.", author: "Douglas Adams" },
+  { text: "It ain't over till it's over.", author: "Yogi Berra" },
+  { text: "I refuse to join any club that would have me as a member.", author: "Groucho Marx" },
+  { text: "You only live once, but if you do it right, once is enough.", author: "Mae West" },
+  { text: "Somewhere, something incredible is waiting to be known.", author: "Carl Sagan" },
+  { text: "I would rather have questions that can't be answered than answers that can't be questioned.", author: "Richard Feynman" },
+  { text: "There is nothing to writing. All you do is sit down at a typewriter and bleed.", author: "Ernest Hemingway" },
+  { text: "Not all those who wander are lost.", author: "J.R.R. Tolkien" },
+  { text: "The universe is under no obligation to make sense to you.", author: "Neil deGrasse Tyson" },
+  { text: "Float like a butterfly, sting like a bee.", author: "Muhammad Ali" },
+  { text: "There is nothing I would not do for those who are really my friends.", author: "Jane Austen" },
+  { text: "All the world's a stage, and all the men and women merely players.", author: "William Shakespeare" },
+  { text: "Tell me and I forget, teach me and I may remember, involve me and I learn.", author: "Benjamin Franklin" },
 ];
 
 const SENTENCES = [
