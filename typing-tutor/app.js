@@ -57,6 +57,23 @@ const QUOTES = [
   { text: "There is nothing I would not do for those who are really my friends.", author: "Jane Austen" },
   { text: "All the world's a stage, and all the men and women merely players.", author: "William Shakespeare" },
   { text: "Tell me and I forget, teach me and I may remember, involve me and I learn.", author: "Benjamin Franklin" },
+  { text: "Nothing in life is to be feared, it is only to be understood.", author: "Marie Curie" },
+  { text: "It is not the strongest of the species that survives, but the one most responsive to change.", author: "Charles Darwin" },
+  { text: "Do not go where the path may lead, go instead where there is no path and leave a trail.", author: "Ralph Waldo Emerson" },
+  { text: "Go confidently in the direction of your dreams. Live the life you have imagined.", author: "Henry David Thoreau" },
+  { text: "Common sense is not so common.", author: "Voltaire" },
+  { text: "Life isn't about finding yourself. Life is about creating yourself.", author: "George Bernard Shaw" },
+  { text: "Intelligence is the ability to adapt to change.", author: "Stephen Hawking" },
+  { text: "What you do makes a difference, and you have to decide what kind of difference you want to make.", author: "Jane Goodall" },
+  { text: "If there's a book that you want to read, but it hasn't been written yet, you must write it.", author: "Toni Morrison" },
+  { text: "We are what we pretend to be, so we must be careful about what we pretend to be.", author: "Kurt Vonnegut" },
+  { text: "In a time of universal deceit, telling the truth is a revolutionary act.", author: "George Orwell" },
+  { text: "For most of history, Anonymous was a woman.", author: "Virginia Woolf" },
+  { text: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", author: "Aristotle" },
+  { text: "The only true wisdom is in knowing you know nothing.", author: "Socrates" },
+  { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+  { text: "There is no greater agony than bearing an untold story inside you.", author: "Maya Angelou" },
+  { text: "Be like water making its way through cracks. Do not be assertive, but adjust to the object.", author: "Bruce Lee" },
 ];
 
 const SENTENCES = [
