@@ -9,13 +9,13 @@ for page in ["https://www.hud.gov/hud-partners/multifamily-fhasl-active","https:
         links=re.findall(r'href="([^"]+\.xlsx?)"',html,re.I)
         log.append(f"HUDLINKS {page} {links}")
         for l in links:
-            if "active" in l.lower() or "fhasl" in l.lower():
+            if l.upper().endswith("-RM-A.XLSX") or "active" in l.lower():
                 u=l if l.startswith("http") else "https://www.hud.gov"+l
                 data=get(u).read(); open(f"{OUT}/hud_mf_active.xlsx","wb").write(data); log.append(f"OK hud {u} {len(data)}"); break
         if os.path.exists(f"{OUT}/hud_mf_active.xlsx"): break
     except Exception as e: log.append(f"FAIL hud {page} {e}")
 # HCRIS SNF raw: keep RPT + related-party (A-8-1) + key worksheet lines
-for fy in ["2024","2025"]:
+for fy in []:
     u=f"https://downloads.cms.gov/FILES/HCRIS/SNF10FY{fy}.ZIP"
     try:
         tmp=f"/tmp/snf{fy}.zip"
