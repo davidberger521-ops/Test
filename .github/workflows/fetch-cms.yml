@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: cms-data }
-      - run: python3 scripts/fetch_cms.py
-        env: { SKIP_CARE_COMPARE: "1" }
+      - run: python3 scripts/fetch_extra.py
       - name: split big files
         run: |
           cd data
