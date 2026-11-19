@@ -1,0 +1,6 @@
+HUDLINKS https://www.hud.gov/hud-partners/multifamily-fhasl-active ['/sites/default/files/Housing/documents/FHA-BF90-RM-A.xlsx', '/sites/default/files/Housing/documents/FHA-BF90-RM-T.xlsx', '/sites/documents/soa_list.xlsx']
+HUDLINKS https://www.hud.gov/program_offices/housing/comp/mf_fhasl_active []
+ZIP 2024 ['SNF10_2024_alpha.csv', 'SNF10_2024_nmrc.csv', 'SNF10_2024_rpt.csv']
+OK hcris 2024
+ZIP 2025 ['SNF10_2025_alpha.csv', 'SNF10_2025_nmrc.csv', 'SNF10_2025_rpt.csv']
+OK hcris 2025
